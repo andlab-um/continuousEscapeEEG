@@ -13,8 +13,9 @@ This repository contains the data analysis and visualization code for the study 
 **Last Updated:** October 2025
 
 ## 1. Repository Directory Structure
+markdown
 
-Continuous-Escape-Strategies-EEG-SEEG/
+# Continuous-Escape-Strategies-EEG-SEEG/
 ├── README.md                          # 项目主文档（本文档）
 ├── LICENSE                            # MIT许可证文件
 ├── CITATION.cff                       # 引用格式文件
