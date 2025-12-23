@@ -16,7 +16,7 @@ This repository contains the data analysis and visualization code for the study 
 markdown
 
 # Continuous-Escape-Strategies-EEG-SEEG/
-continuous-escape-strategies/
+/ -> continuous-escape-strategies/
 ├── &#128193; data/                            # Data directory (Git LFS)
 │   ├── behavioral/                     # Behavioral metrics
 │   └── neural/                         # Neural recordings
