@@ -16,129 +16,30 @@ This repository contains the data analysis and visualization code for the study 
 markdown
 
 # Continuous-Escape-Strategies-EEG-SEEG/
-├── README.md                          # 项目主文档（本文档）
-├── LICENSE                            # MIT许可证文件
-├── CITATION.cff                       # 引用格式文件
-├── requirements.txt                   # Python依赖包列表
-├── environment.yml                    # Conda环境配置文件
-├── run_pipeline.py                    # 主运行脚本
-├── data/                              # 数据目录（Git LFS管理）
-│   ├── behavioral/                    # 行为学数据
-│   │   ├── study1_eeg_metrics.csv     # 研究1（EEG）行为指标
-│   │   ├── study2_seeg_metrics.csv    # 研究2（SEEG）行为指标
-│   │   └── README_data.md             # 数据说明文档
-│   └── neural/                        # 神经影像数据
-│       ├── eeg/                       # 头皮EEG数据
-│       │   ├── raw/                   # 原始EEG数据（.fif格式）
-│       │   ├── preprocessed/          # 预处理后数据
-│       │   │   ├── study1_tfr_power.mat
-│       │   │   └── study1_epochs.fif
-│       │   └── derivatives/           # 衍生数据
-│       │       └── theta_alpha_features.csv
-│       └── seeg/                      # 颅内SEEG数据
-│           ├── raw/                   # 原始SEEG数据（.edf/.mat格式）
-│           ├── preprocessed/          # 预处理后数据
-│           │   ├── study2_hga_results.mat
-│           │   └── study2_roi_labels.mat
-│           └── derivatives/           # 衍生数据
-│               └── hga_features.csv
-├── analysis/                          # 分析脚本目录
-│   ├── 01_behavioral/                 # 行为学分析
-│   │   ├── behavioral_study1.py       # 研究1行为分析
-│   │   ├── behavioral_study2.py       # 研究2行为分析
-│   │   ├── behavioral_stats.py        # 统计检验
-│   │   └── plot_behavioral.py         # 行为图绘制
-│   ├── 02_eeg_study1/                 # EEG研究分析
-│   │   ├── preprocess_eeg.py          # EEG预处理
-│   │   ├── eeg_tfr_analysis.py        # 时频分析
-│   │   ├── eeg_topography.py          # 地形图绘制
-│   │   ├── eeg_regression.py          # 回归分析
-│   │   ├── theta_gamma_coupling.py    # Theta-Gamma耦合分析
-│   │   └── config_eeg.yaml            # EEG分析配置
-│   ├── 03_seeg_study2/                # SEEG研究分析
-│   │   ├── preprocess_seeg.py         # SEEG预处理
-│   │   ├── seeg_hga_analysis.py       # HGA分析
-│   │   ├── seeg_roi_analysis.py       # ROI分析
-│   │   ├── seeg_connectivity.py       # 连接性分析
-│   │   ├── seeg_behavior_link.py      # 神经-行为关联
-│   │   └── config_seeg.yaml           # SEEG分析配置
-│   └── 04_integrated_analysis/        # 整合分析
-│       ├── cross_modal_integration.py # 跨模态整合
-│       ├── network_analysis.py        # 网络分析
-│       └── meta_analysis.py           # 元分析
-├── notebooks/                         # Jupyter Notebooks
-│   ├── 01_Behavioral_Exploration.ipynb
-│   ├── 02_EEG_Analysis_Pipeline.ipynb
-│   ├── 03_SEEG_Analysis_Pipeline.ipynb
-│   └── 04_Integrated_Findings.ipynb
-├── utils/                             # 工具函数
-│   ├── __init__.py
-│   ├── data_loader.py                 # 数据加载器
-│   ├── plot_utils.py                  # 绘图工具
-│   ├── stats_utils.py                 # 统计工具
-│   ├── neuro_utils.py                 # 神经影像工具
-│   └── file_utils.py                  # 文件操作工具
-├── config/                            # 配置文件
-│   ├── analysis_params.yaml           # 分析参数配置
-│   ├── plot_styles.yaml               # 绘图样式配置
-│   └── paths.yaml                     # 路径配置
-├── tests/                             # 测试文件
-│   ├── test_behavioral.py
-│   ├── test_eeg_analysis.py
-│   ├── test_seeg_analysis.py
-│   └── test_utils.py
-├── docs/                              # 文档目录
-│   ├── index.md                       # 文档首页
-│   ├── installation.md                # 安装指南
-│   ├── tutorial.md                    # 使用教程
-│   ├── api_reference.md               # API参考
-│   └── figures/                       # 文档用图
-├── figures/                           # 生成图表
-│   ├── behavioral/                    # 行为学图表
-│   │   ├── figure1/                   # 图1相关
-│   │   │   ├── panel_a.png
-│   │   │   ├── panel_b.png
-│   │   │   └── panel_c.png
-│   │   └── supplementary/
-│   ├── eeg/                           # EEG图表
-│   │   ├── figure2/
-│   │   │   ├── topography.png
-│   │   │   ├── tfr_plot.png
-│   │   │   └── regression.png
-│   │   └── supplementary/
-│   ├── seeg/                          # SEEG图表
-│   │   ├── figure3/
-│   │   │   ├── hga_timecourse.png
-│   │   │   ├── roi_comparison.png
-│   │   │   └── behavior_correlation.png
-│   │   └── supplementary/
-│   └── integrated/                    # 整合分析图表
-│       ├── figure4/
-│       └── supplementary/
-├── results/                           # 分析结果
-│   ├── statistical_tests/             # 统计检验结果
-│   │   ├── behavioral_stats.csv
-│   │   ├── eeg_stats.csv
-│   │   └── seeg_stats.csv
-│   ├── model_outputs/                 # 模型输出
-│   │   ├── regression_models.pkl
-│   │   ├── clustering_results.npy
-│   │   └── network_metrics.csv
-│   └── summary_tables/                # 汇总表格
-│       ├── demographic_summary.csv
-│       ├── behavioral_summary.csv
-│       └── neural_summary.csv
-├── manuscript/                        # 论文相关文件
-│   ├── main_manuscript.tex            # 主论文LaTeX
-│   ├── supplementary.tex              # 补充材料
-│   ├── references.bib                 # 参考文献
-│   └── responses/                     # 审稿回复
-└── .github/                           # GitHub配置
-    ├── workflows/                     # CI/CD工作流
-    │   ├── tests.yml                  # 测试工作流
-    │   └── build_docs.yml             # 文档构建工作流
-    └── ISSUE_TEMPLATE/                # Issue模板
-
+continuous-escape-strategies/
+├── 📁 data/                            # Data directory (Git LFS)
+│   ├── behavioral/                     # Behavioral metrics
+│   └── neural/                         # Neural recordings
+│       ├── eeg/                        # Scalp EEG data
+│       └── seeg/                       # Intracranial SEEG data
+├── 📁 analysis/                        # Core analysis scripts
+│   ├── 01_behavioral/                  # Behavioral analysis
+│   ├── 02_eeg_study1/                  # EEG analysis (Study 1)
+│   ├── 03_seeg_study2/                 # SEEG analysis (Study 2)
+│   └── 04_integrated_analysis/         # Cross-modal integration
+├── 📁 notebooks/                       # Interactive Jupyter notebooks
+├── 📁 utils/                           # Utility functions
+├── 📁 config/                          # Configuration files
+├── 📁 tests/                           # Unit tests
+├── 📁 docs/                            # Documentation
+├── 📁 figures/                         # Generated figures
+├── 📁 results/                         # Analysis outputs
+├── 📁 manuscript/                      # Manuscript files
+├── 📄 README.md                        # This file
+├── 📄 requirements.txt                 # Python dependencies
+├── 📄 environment.yml                  # Conda environment
+├── 📄 run_pipeline.py                  # Main pipeline script
+└── 📄 .github/                         # GitHub workflows
 ## 2. File Descriptions
 
 | Directory/File | Description | 中文描述 |
