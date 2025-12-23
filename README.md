@@ -1,4 +1,4 @@
-# Project Repository: "Extracranial and Intracranial EEG Evidence of Escape Strategies Under Continuous Threat"
+# Extracranial and Intracranial EEG Evidence of Escape Strategies Under Continuous Threat
 
 This repository contains the data analysis and visualization code for the study "Extracranial and Intracranial EEG Evidence of Escape Strategies Under Continuous Threat." The structure is organized to reflect the key components of the research: behavioral analysis, scalp EEG (Study 1), and intracranial SEEG (Study 2).
 
@@ -17,29 +17,30 @@ markdown
 
 # Continuous-Escape-Strategies-EEG-SEEG/
 continuous-escape-strategies/
-├── 📁 data/                            # Data directory (Git LFS)
+├── &#128193; data/                            # Data directory (Git LFS)
 │   ├── behavioral/                     # Behavioral metrics
 │   └── neural/                         # Neural recordings
 │       ├── eeg/                        # Scalp EEG data
 │       └── seeg/                       # Intracranial SEEG data
-├── 📁 analysis/                        # Core analysis scripts
+├── &#128193; analysis/                        # Core analysis scripts
 │   ├── 01_behavioral/                  # Behavioral analysis
 │   ├── 02_eeg_study1/                  # EEG analysis (Study 1)
 │   ├── 03_seeg_study2/                 # SEEG analysis (Study 2)
 │   └── 04_integrated_analysis/         # Cross-modal integration
-├── 📁 notebooks/                       # Interactive Jupyter notebooks
-├── 📁 utils/                           # Utility functions
-├── 📁 config/                          # Configuration files
-├── 📁 tests/                           # Unit tests
-├── 📁 docs/                            # Documentation
-├── 📁 figures/                         # Generated figures
-├── 📁 results/                         # Analysis outputs
-├── 📁 manuscript/                      # Manuscript files
-├── 📄 README.md                        # This file
-├── 📄 requirements.txt                 # Python dependencies
-├── 📄 environment.yml                  # Conda environment
-├── 📄 run_pipeline.py                  # Main pipeline script
-└── 📄 .github/                         # GitHub workflows
+├── &#128193; notebooks/                       # Interactive Jupyter notebooks
+├── &#128193; utils/                           # Utility functions
+├── &#128193; config/                          # Configuration files
+├── &#128193; tests/                           # Unit tests
+├── &#128193; docs/                            # Documentation
+├── &#128193; figures/                         # Generated figures
+├── &#128193; results/                         # Analysis outputs
+├── &#128193; manuscript/                      # Manuscript files
+├── &#128196; README.md                        # This file
+├── &#128196; requirements.txt                 # Python dependencies
+├── &#128196; environment.yml                  # Conda environment
+├── &#128196; run_pipeline.py                  # Main pipeline script
+└── &#128196; .github/                         # GitHub workflows
+
 ## 2. File Descriptions
 
 | Directory/File | Description | 中文描述 |
