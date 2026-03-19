@@ -1,8 +1,8 @@
-# continuousEscapeEEG    <img src="./summary_figure.jpg" align="right" width="500px">
+# continuousEscapeEEG    <img src="./summary_figure.jpg" align="right" width="800px">
 
-#[![Paper](https://img.shields.io/badge/Paper-preprint-blue)](https://doi.org/10.1101/2024.01.16.575785)
-#[![Twitter URL](https://img.shields.io/twitter/url?label=%40ANDlab3&style=social&url=https%3A%2F%2Ftwitter.com%2FANDlab3)
-#](https://twitter.com/ANDlab3)
+[![Paper](https://img.shields.io/badge/Paper-preprint-blue)](https://doi.org/10.1101/2024.01.16.575785)
+[![Twitter URL](https://img.shields.io/twitter/url?label=%40ANDlab3&style=social&url=https%3A%2F%2Ftwitter.com%2FANDlab3)
+](https://twitter.com/ANDlab3)
 
 
 > From [Affective, Neuroscience, and Decision-making Lab](https://andlab-um.com)
